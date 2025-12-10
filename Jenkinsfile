@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Run Tests') {
             steps {
-               sh 'bashrc'
+               sh './bashrc'
                npm command: 'install'
                npm command: 'test'
             }
