@@ -13,8 +13,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                // sh '~/.nvm/nvm.sh'
-               npm 'install'
-               npm 'test'
+               npm command: 'install'
+               npm command: 'test'
             }
         }
         stage('Build Image') {
