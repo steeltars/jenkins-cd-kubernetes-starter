@@ -40,7 +40,8 @@ pipeline {
             steps {
                 sh "cp -u /mnt/k3s/config config.yaml"
                 sh "kubectl apply -f kubernetes/deploy.yml"
-                sh "kubectl apply -f kubernetes/service.yml"
+                sh "kubectl apply -f kubernetes/service.yml"\
+                sh "curl -s http://vatcalc-service:30129 || echo 'Uh oh!!'"
             }
         }
     }
